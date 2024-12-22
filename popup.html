@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 8px;
+        }
+        form {
+            width: 300px;
+        }
+        .nowrap-div {
+            display: flex;
+            margin: 2px;
+        }
+        span {
+            flex: 1;
+        }
+        .input-text {
+            flex: 4;
+        }
+        #web-type {
+            display: flex;
+            /* 子元素换行 */
+            flex-wrap: wrap;  
+            /* 子元素行与行之间去掉空隙 */
+            align-content: flex-start;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body style="height: 200px;">
+    <form action="" method="post">
+        <div class="nowrap-div">
+            <span>url</span><input class="input-text" type="text" name="url" id="form-url">
+        </div>
+        <div class="nowrap-div">
+            <span>名称</span><input class="input-text" type="text" name="name" id="form-name">
+        </div>
+        <div class="nowrap-div">
+            <span>图标</span><input class="input-text" type="text" name="favicon" id="form-favicon">
+        </div>
+        <div>
+            <span>类型</span><br>
+            <div id="web-type">
+            </div>
+        </div>
+        <div>
+            <span>描述</span><br>
+            <textarea name="desc" id="desc"></textarea>
+        </div>
+        <button type="button" id="formSubmit">保存</button>
+    </form>
+    <div id="tip"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

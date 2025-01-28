@@ -16,7 +16,8 @@ function getTypes(){
     action: "makeCorsPostRequest",
     url: "http://localhost:1304/pjone-server/systag/getTag",
     data: {
-      type: 'w'
+      type: 'w',
+      name: ''
     },
   }, function(res) {
     console.log(res);
